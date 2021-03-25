@@ -26,63 +26,10 @@ public class Produto {
 	@Size (min = 5, max = 200)
 	private String descricao;
 	
-	@Size (min = 5, max = 20)
-	private String empresa;
-	
 	private double preco;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("produto")
+    @JsonIgnoreProperties("produto")
     private Categoria categoria;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
-
-	public String getTitulo() {
-		return titulo;
-	}
-
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-	public String getEmpresa() {
-		return empresa;
-	}
-
-	public void setEmpresa(String empresa) {
-		this.empresa = empresa;
-	}
-
-	public double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
-	}
-
-	public Categoria getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
-	
-	
 
 }

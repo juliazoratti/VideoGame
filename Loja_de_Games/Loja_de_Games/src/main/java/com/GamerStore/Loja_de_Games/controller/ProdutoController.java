@@ -20,7 +20,7 @@ import com.GamerStore.Loja_de_Games.repository.ProdutoRepository;
 
 @RestController
 @RequestMapping ("/produto")
-@CrossOrigin (origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProdutoController {
 	
 	@Autowired
@@ -38,15 +38,15 @@ public class ProdutoController {
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping ("/titulo/{titulo}")
+	/*@GetMapping ("/titulo/{titulo}")
 	public ResponseEntity <List<Produto>> getByTitulo (@PathVariable String titulo){
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
-	}
+	}*/
 	
 	@PostMapping
-	public ResponseEntity <Produto> post (@RequestBody Produto produto){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produto));
-	}
+    public ResponseEntity<Produto> post (@RequestBody Produto produto){
+        return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produto));
+    }
 	
 	@PutMapping
 	public ResponseEntity <Produto> put (@RequestBody Produto produto){
@@ -57,4 +57,6 @@ public class ProdutoController {
 	public void delete (@PathVariable long id) {
 		repository.deleteById(id);
 	}
+
 }
+
