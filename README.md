@@ -5,10 +5,10 @@
 </h1>
 
 <h1 align="center">Game On - Loja de games</h1>
-<p align="center">Criação do projeto loja de Games da Generation Brasil.</p>
+<p align="center">Criação do projeto Loja de Games da Generation Brasil.</p>
 
 <h4 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
+	🚧  Game On 🚀 Em construção...  🚧
 </h4>
 
 ### 🛠 Tecnologias
